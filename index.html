@@ -1,84 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jogo de Separar Lixo</title>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    #game-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 800px;
-    }
+    <link rel="stylesheet" href="src/estilo/style.css">
+    <link rel="stylesheet" href="src/estilo/reset.css">
 
-    .trash-can {
-        width: 150px;
-        height: 200px;
-        background-color: white;
-        border: 2px solid black;
-        margin: 10px;
-        text-align: center;
-        cursor: pointer;
-    }
+    <title>Jogo de Separar Lixo</title>
 
-    .trash-can img {
-        max-width: 100%;
-        max-height: 100%;
-    }
 
-    #trash-items {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
-    }
-
-    .trash-item {
-        width: 100px;
-        height: 100px;
-        border: 2px solid black;
-        margin: 10px;
-        cursor: pointer;
-    }
-
-    .trash-item img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    #message {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        border: 2px solid #333;
-        display: none;
-    }
-</style>
 </head>
+
 <body>
 
-    <h1>IFMT </h1>
+    <h1 class="titulo-pagina">IFMT </h1>
+
+    <header class="header">
+        <a href="/" class="logo">Logo</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <div id="game-container">
         <div id="trash-blue" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="blue-trash.png" alt="Lixeiro Azul">
+            <img src="src/image/lixo-azul-vazio-recicla-a-lixeira-de-plastico_311865-10002.avif" alt="Lixeiro Azul">
         </div>
         <div id="trash-orange" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="orange-trash.png" alt="Lixeiro Laranja">
+            <img src="src/image/png-clipart-waste-container-recycling-bin-icon-delete-button-s-text-orange.png" alt="Lixeiro Laranja">
         </div>
 
         <div id="trash-items">
@@ -92,12 +48,14 @@
     </div>
 
     <div id="message">
+
         <h2>Fim de Jogo!</h2>
         <p>Você colocou o lixo no lixeiro errado.</p>
         <button onclick="resetGame()">Jogar Novamente</button>
     </div>
 
     <script>
+
         let gameActive = true;
 
         function allowDrop(event) {
@@ -137,5 +95,7 @@
             });
         }
     </script>
+
 </body>
+
 </html>
