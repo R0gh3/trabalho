@@ -18,6 +18,7 @@
     <h1 class="titulo-pagina">IFMT </h1>
 
     <header class="header">
+
         <a href="/" class="logo">Logo</a>
         <nav>
             <ul class="menu">
@@ -26,33 +27,36 @@
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
+        
     </header>
 
-
-    <div id="game-container">
-        <div id="trash-blue" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="src/image/lixo-azul-vazio-recicla-a-lixeira-de-plastico_311865-10002.avif" alt="Lixeiro Azul">
-        </div>
-        <div id="trash-orange" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="src/image/png-clipart-waste-container-recycling-bin-icon-delete-button-s-text-orange.png" alt="Lixeiro Laranja">
-        </div>
-
-        <div id="trash-items">
-            <div class="trash-item" data-type="reciclavel" draggable="true" ondragstart="drag(event)">
-                <img src="recyclable-trash.png" alt="Lixo Reciclável">
+    <section class="jogo">
+        <div id="game-container">
+            <div id="trash-blue" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="src/image/lixo-azul-vazio-recicla-a-lixeira-de-plastico_311865-10002.avif" alt="Lixeiro Azul">
             </div>
-            <div class="trash-item" data-type="humido" draggable="true" ondragstart="drag(event)">
-                <img src="organic-trash.png" alt="Lixo Orgânico">
+            <div id="trash-orange" class="trash-can" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="src/image/png-clipart-waste-container-recycling-bin-icon-delete-button-s-text-orange.png"
+                    alt="Lixeiro Laranja">
+            </div>
+
+            <div id="trash-items">
+                <div class="trash-item" data-type="reciclavel" draggable="true" ondragstart="drag(event)">
+                    <img src="recyclable-trash.png" alt="Lixo Reciclável">
+                </div>
+                <div class="trash-item" data-type="humido" draggable="true" ondragstart="drag(event)">
+                    <img src="organic-trash.png" alt="Lixo Orgânico">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="message">
+        <div id="message">
 
-        <h2>Fim de Jogo!</h2>
-        <p>Você colocou o lixo no lixeiro errado.</p>
-        <button onclick="resetGame()">Jogar Novamente</button>
-    </div>
+            <h2>Fim de Jogo!</h2>
+            <p>Você colocou o lixo no lixeiro errado.</p>
+            <button onclick="resetGame()">Jogar Novamente</button>
+        </div>
+    </section>
 
     <script>
 
